@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "flask-sorteio"
+version = "0.1.0"
+description = "Uma aplicação Flask para distribuição de cotas."
+authors = ["Erik Marques <lucro.alternativo@outlook.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+flask = "^3.1.0"
+flask-sqlalchemy = "^3.1.1"
+dynaconf = "^3.2.7"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.4"
+flask-pytest = "^0.0.5"
+flask-migrate = "^4.1.0"
+flask-shell-ipython = "^0.5.3"
+flask-debugtoolbar = "^0.16.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
