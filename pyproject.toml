@@ -3,7 +3,7 @@ name = "flask-sorteio"
 version = "0.1.0"
 description = "Uma aplicação Flask para distribuição de cotas."
 authors = ["Erik Marques <lucro.alternativo@outlook.com>"]
-readme = "README.md"
+readme = "./flask_sorteio/README.md"
 
 [tool.poetry.dependencies]
 python = "^3.9"
