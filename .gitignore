@@ -23,4 +23,5 @@ Makefile
 
 # arquivos de variaveis de ambiente
 .env
-.flaskenv
+*/.flaskenv
+settings.toml
