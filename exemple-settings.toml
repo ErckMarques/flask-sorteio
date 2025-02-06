@@ -1,0 +1,14 @@
+[default]
+SECRET_KEY = 'your secret key app'
+EXTENSIONS = [
+    "your extensions that will be initialized"
+]
+
+[development]
+DEBUG = true
+SQLALCHEMY_DATABASE_URI = ''
+SQLALCHEMY_TRACK_MODIFICATIONS = false
+
+[production]
+DEBUG = false
+SQLALCHEMY_TRACK_MODIFICATIONS = false
