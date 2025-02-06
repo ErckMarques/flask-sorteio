@@ -11,6 +11,13 @@ flask = "^3.1.0"
 flask-sqlalchemy = "^3.1.1"
 dynaconf = "^3.2.7"
 
+[tool.taskipy.variables]
+cur_dir = '/c/Users/Estudos/Documents/flask-app'
+
+[tool.taskipy.tasks]
+cwd = { cmd='cd {cur_dir}', help='muda para o diretorio de trabalho no terminal(bash)' }
+cmd_test = { cmd='python -m pytest tests/', help='roda os testes' }
+test = { cmd='task cwd && task cmd_test', help='muda para o diretorio de trabalho e executa os testes' }
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"
