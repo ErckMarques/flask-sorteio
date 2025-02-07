@@ -25,3 +25,5 @@ Makefile
 .env
 */.flaskenv
 settings.toml
+
+*/Todo
