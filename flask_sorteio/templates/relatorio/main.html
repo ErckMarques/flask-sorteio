@@ -1,0 +1,29 @@
+{% from 'relatorio/macros_report.html' import registro_saida, calcular_total as calcular, field_signature %}
+{% block main %}
+<main>
+    <section class="financeiro margin">
+        <h1><strong>FINANCEIRO: [MÊS]</strong></h1>
+        {{  calcular('entradas', [100, 200, 300]) }}
+        {{  calcular('saídas', [100, 200, 300]) }}
+    </section>
+    <section class="entradas margin">
+        <h1><strong>Registro de Saída:</strong></h1>
+        <h1><strong>Descrição</strong></h1>
+        <ul>
+            {{ registro_saida('Gastos com lanche pós consagração', 100) }}
+            {{ registro_saida('Despesa 2', 200) }}
+            {{ registro_saida('Despesa 3', 300) }}
+        </ul>
+    </section>
+    <section class="assinaturas margin">
+        <h1><strong>Assinaturas:</strong></h1>
+        
+        <div class="signatures">
+            {{ field_signature('dirigente', 1) }}
+            {{ field_signature('Tesoureiro', 1) }}
+            {{ field_signature('supervisor', 1) }}
+            {{ field_signature('pastor', 1) }}
+        </div>
+    </section>
+</main>
+{% endblock %}

@@ -1,4 +1,67 @@
 @page {
     size: A4;
-    margin: 20mm;
+    orientation: portrait;
+}
+
+.margin {
+    margin-left: 1.69cm;
+    margin-right: 1.69cm;
+}
+
+header {
+    display: flex;
+    height: 25%;
+
+    & h2 {
+        font-size: 15px;
+    }
+
+    & h3 {
+        font-size: 10px;
+    }
+
+    & .header-logo {
+        margin-left: auto;
+        margin-right: 1.69cm;
+    }
+}
+
+.bold { font-weight: bold;}
+
+.inline-grid{
+    display: grid;
+    grid-template-columns: 5fr 1fr 8%;
+    grid-template-rows: 1fr ;
+}
+
+.text-alg-left {
+    text-align: left;
+}
+
+.total {
+    display: flex;
+}
+
+.signatures {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 3fr);
+    grid-template-areas: "dir" "tes" "sup" "pr";
+}
+
+.item1 { grid-area: "dir";}
+.item2 { grid-area: "tes";}
+.item3 { grid-area: "sup";}
+.item4 { grid-area: "pr";}
+
+.sig-txt, .sig-line {
+    text-align: center;
+}
+
+.sig-txt {
+    font-size: 12px;
+}
+
+.sig-line {
+    padding-top: 30px;
 }
