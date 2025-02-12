@@ -1,42 +1,53 @@
 @page {
-    size: A4 portrait;    
+    size: A4 portrait;
+    margin-right: 1.49cm;
+    margin-left: 1.69cm;
 }
 
 @page print {
     footer {
         page-break-after: always;
+        overflow: auto;
     }
-    /* margin-left: 3cm;
-    margin-right: 1.69cm;
-    margin-top: 1cm;
-    margin-bottom: 1cm; */
 }
 
-/* .margin {
-    margin-left: 1.69cm;
-    margin-right: 1.69cm;
-} */
+body {
+    display: grid;
+    grid-template-rows: 100px 1fr 250px;
+    grid-template-areas: 
+    "header" 
+    "content" 
+    "footer";
+    row-gap: 10px;
+    margin-left: 10%;
+    margin-right: 15%;
+}
 
 header {
+    /* Alocamos os elementos numa area do display grid */
+    grid-area: 'header';
+    /* Definimos o display do elemento */
     display: flex;
-    height: 25%;
+    justify-content: space-between;
+    height: 300px;
     width: 100%;
 
-    & h2 {
-        font-size: 15px;
+    & .header-text > h3 {
+        font-size: 12px;
     }
 
-    & h3 {
-        font-size: 10px;
-    }
-
-    & .header-logo {
-        margin-left: auto;
-        margin-right: 1.69cm;
+    & .header-logo > img {
+        width: 300px;
+        height: auto;
+        align-items: baseline;
     }
 }
 
-.bold { font-weight: bold;}
+.total-items { 
+    font-weight: bold;
+    padding-left: 15px;
+    /* margin-top: 0%; */
+}
 
 .inline-grid{
     display: grid;
@@ -48,12 +59,13 @@ header {
     text-align: left;
 }
 
-.entradas {
-    width: 60%;
+.saidas {
+    width: 90vw;
 }
 
 .total {
     display: flex;
+    flex-direction: column;
 }
 
 .signatures {
