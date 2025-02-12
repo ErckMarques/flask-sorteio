@@ -13,11 +13,15 @@ dynaconf = "^3.2.7"
 
 [tool.taskipy.variables]
 cur_dir = 'C:/Users/Estudos/Documents/flask-app'
+git_home = { var = '{cur_dir}/.git/config', recursive = true }
 
 [tool.taskipy.tasks]
 cwd = { cmd='cd {cur_dir}', help='muda para o diretorio de trabalho no terminal(bash)', use_vars= true }
 cmd_test = { cmd='python -m pytest tests/', help='roda os testes' }
 test = { cmd='task cwd && task cmd_test', help='muda para o diretorio de trabalho e executa os testes' }
+git = { cmd='set HOME={git_home}', help='configura pasta do git', use_vars= true }
+deb_app = { cmd='flask --app flask_sorteio/ run --debug', help='roda a aplicação em modo de debug' }
+prod_app = { cmd='flask --app flask_sorteio/ run', help='roda a aplicação em modo de produção' }
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.4"

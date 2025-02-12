@@ -7,13 +7,9 @@
 {% endmacro %}
 
 {% macro calcular_total(target, args) %}
-    <div class="total"> <!-- trocar display para block -->
-        <h3 class="bold">
-            <p>TOTAL DE {{ target|upper }}</p>
-            <p>R$ </p>
-            <p>{{ args|sum }}</p>
-        </h3>
-    </div>    
+        <h3 class="total-items">
+            TOTAL DE {{ target|upper }} R$ {{ args|sum }}
+        </h3> 
 {% endmacro %}
 
 {% macro field_signature(cargo, pos) %}

@@ -3,16 +3,25 @@
 <main>
     <section class="financeiro margin">
         <h1><strong>FINANCEIRO: [MÊS]</strong></h1>
-        {{  calcular('entradas', [100, 200, 300]) }}
-        {{  calcular('saídas', [100, 200, 300]) }}
+        <div class="total"> <!-- Verificar o tipo de display -->
+            {{  calcular('entradas', [100, 200, 300]) }}
+            {{  calcular('saídas', [100, 200, 300]) }}
+        </div>
     </section>
-    <section class="entradas margin">
+    <section class="saidas">
         <h1><strong>Registro de Saída:</strong></h1>
         <h1><strong>Descrição</strong></h1>
         <ul>
             {{ registro_saida('Gastos com lanche pós consagração', 100) }}
             {{ registro_saida('Despesa 2', 200) }}
             {{ registro_saida('Despesa 3', 300) }}
+            {{ registro_saida('Despesa 4', 300) }}
+            {{ registro_saida('Despesa 5', 300) }}
+            {{ registro_saida('Despesa 6', 300) }}
+            {{ registro_saida('Despesa 7', 300) }}
+            {{ registro_saida('Despesa 8', 300) }}
+            {{ registro_saida('Despesa 9', 300) }}
+            {{ registro_saida('Despesa 10', 300) }}
         </ul>
     </section>
     <section class="assinaturas margin">
