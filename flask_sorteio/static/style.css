@@ -1,16 +1,26 @@
 @page {
-    size: A4;
-    orientation: portrait;
+    size: A4 portrait;    
 }
 
-.margin {
+@page print {
+    footer {
+        page-break-after: always;
+    }
+    /* margin-left: 3cm;
+    margin-right: 1.69cm;
+    margin-top: 1cm;
+    margin-bottom: 1cm; */
+}
+
+/* .margin {
     margin-left: 1.69cm;
     margin-right: 1.69cm;
-}
+} */
 
 header {
     display: flex;
     height: 25%;
+    width: 100%;
 
     & h2 {
         font-size: 15px;
@@ -38,12 +48,17 @@ header {
     text-align: left;
 }
 
+.entradas {
+    width: 60%;
+}
+
 .total {
     display: flex;
 }
 
 .signatures {
     display: grid;
+    gap: 10px 20px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 3fr);
     grid-template-areas: "dir" "tes" "sup" "pr";

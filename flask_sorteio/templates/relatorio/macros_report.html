@@ -1,16 +1,18 @@
 {% macro registro_saida(descricao, valor) %}
     <li class="inline-grid">
         <span>{{ descricao }}.</span>
-        <span>VALOR: R$</span>
+        <span>VALOR: R$ </span>
         <span class="text-alg-left">{{ valor }}</span>
     </li>
 {% endmacro %}
 
 {% macro calcular_total(target, args) %}
-    <div class="total inline-grid">
-        <h3 class="bold">TOTAL DE {{ target|upper }} </h3>
-        <h3 class="bold">R$ </h3>
-        <h3 class="bold">{{ args|sum }}</h3>
+    <div class="total"> <!-- trocar display para block -->
+        <h3 class="bold">
+            <p>TOTAL DE {{ target|upper }}</p>
+            <p>R$ </p>
+            <p>{{ args|sum }}</p>
+        </h3>
     </div>    
 {% endmacro %}
 

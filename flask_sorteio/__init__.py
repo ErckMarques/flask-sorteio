@@ -1,15 +1,19 @@
 from flask import Flask
 
-from flask_sorteio.extensions.blueprints.home import bp as home_bp
+from flask_sorteio.extensions import views
 from flask_sorteio.extensions import toobar
 
 def create_app():
     """Uma fábrica para a aplicação flask"""
     app = Flask(__name__)
     
+    # inicializa as extensões
+    
+    # inicializa a extensão flask_debug_toobar para debug
     toobar.init_app(app)
     
-    app.register_blueprint(home_bp)
+    # registra os blueprints na aplicação
+    views.init_app(app)
     
     return app 
 
