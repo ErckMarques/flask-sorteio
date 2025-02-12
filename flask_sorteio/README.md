@@ -1,4 +1,5 @@
 ```
+
 # Projeto de Vendas de Cotas
 
 Este é um projeto de aplicação web desenvolvido com Flask para gerenciar vendas de cotas.
@@ -47,7 +48,7 @@ Este é um projeto de aplicação web desenvolvido com Flask para gerenciar vend
 
 1. Inicie o servidor Flask:
     ```bash
-    flask run
+    flask --app ./flask_sorteio run
     ```
 2. Acesse a aplicação no navegador:
     ```
