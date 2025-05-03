@@ -10,6 +10,10 @@ python = "^3.9"
 flask = "^3.1.0"
 flask-sqlalchemy = "^3.1.1"
 dynaconf = "^3.2.7"
+flask-admin = "^1.6.1"
+flask-wtf = "^1.2.2"
+flask-jwt = "^0.3.2"
+flask-restful = "^0.3.10"
 
 [tool.taskipy.variables]
 cur_dir = 'C:/Users/Estudos/Documents/flask-app'
