@@ -1,5 +1,4 @@
 ```
-
 # Projeto de Vendas de Cotas
 
 Este é um projeto de aplicação web desenvolvido com Flask para gerenciar vendas de cotas.
