@@ -8,7 +8,7 @@ def init_app(app: Flask):
     # FlaskDynaconf(app, settings_files=['settings.toml'])
     app.logger.info('Iniciando as configurações da aplicação')
     # app.config.load(Path(__file__).absolute().parents[3].joinpath('settings.toml'))
-    FlaskDynaconf(app, settings_files=[Path(__file__).absolute().parents[3].joinpath('settings.toml')])
+    FlaskDynaconf(app, settings_files=[Path(__file__).absolute().parents[3].joinpath('settings.toml').as_posix()])
     
     app.config['REPORT'] = Path(__file__).parents[3].joinpath('templates', 'relatorio').absolute()
     
